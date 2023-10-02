@@ -99,11 +99,9 @@ class GameDetail(models.Model):
         on_delete=models.CASCADE,
         unique=False,
     )
-    idPlayer = models.ForeignKey(
-        Player,
+    idPlayer = models.BigIntegerField(
         db_column="IdPlayer",
         verbose_name="Player",
-        on_delete=models.CASCADE,
         null=False,
         blank=False
     )
