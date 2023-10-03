@@ -1,6 +1,18 @@
 import csv, json
-from .models import League, Tournament, Team, Player, Game, GameDetail
+from .models import (
+    League,
+    Tournament,
+    Team,
+    Player,
+    Game,
+    GameDetail,
+    Stage,
+    Section,
+    Match,
+    MatchDetail,
+)
 from django.http import HttpResponse, JsonResponse
+from django.utils.decorators import method_decorator
 from django.views import View
 from django.db import transaction
 
@@ -48,9 +60,10 @@ def SetTournaments(request):
     with open(filePath) as f:
         reader = csv.DictReader(f)
         for index, row in enumerate(reader):
+            print(row)
             index = index + 1
             modelRow = Tournament()
-            modelRow.id = index
+            modelRow.idTournament = row["id"]
             modelRow.idLeague = row["leagueId"]
             modelRow.name = row["name"]
             modelRow.slug = row["slug"]
@@ -72,9 +85,8 @@ def SetTeams(request, year):
     with open(filePath) as f:
         reader = json.load(f)
         for index, row in enumerate(reader):
-            index = index + 1
+            index += 1
             modelRow = Team()
-            modelRow.id = index
             modelRow.idTeam = row["team_id"]
             modelRow.name = row["name"]
             modelRow.acronym = row["acronym"]
@@ -147,17 +159,17 @@ class SetGameDetail(View):
                     # READ the json file
                     for gameNumber, row in enumerate(reader):
                         gameNumber += 1
-                        gameId = int(float(row["esportsGameId"]))
+                        gameId = row["esportsGameId"]
                         queryGame = self.get_object(gameId, "Game")
                         if queryGame:
-                            if gameNumber > 36000 and gameNumber < 44000:
+                            if gameNumber < 40000:
                                 listParticipants = row["participantMapping"]
                                 print("Participants: ", listParticipants)
                                 # verify if a the list of participants is equal to 10
                                 if len(listParticipants) == 10:
                                     # get game instance to save in db
                                     result = self.get_game_detail_or_false(
-                                        queryGame, listParticipants, gameNumber
+                                        queryGame, listParticipants
                                     )
 
                                     # save to db
@@ -174,7 +186,7 @@ class SetGameDetail(View):
             return HttpResponse(str(e))
         return HttpResponse("Data saved correctly")
 
-    def get_game_detail_or_false(self, gameInstance, listPlayers, counter):
+    def get_game_detail_or_false(self, gameInstance, listPlayers):
         playersFounded = []
         for playerCounter, player in enumerate(listPlayers):
             playerCounter += 1
@@ -196,7 +208,6 @@ class SetGameDetail(View):
             # if not save the current game lop into detail
             for playerInstance in playersFounded:
                 gameDetailInstace = GameDetail(
-                    idGameDetail=counter,
                     idGame=gameInstance,
                     idPlayer=playerInstance["idPlayer"],
                     playerMatch=playerInstance["playerMatch"],
@@ -263,3 +274,131 @@ def openGameJson(request, year, game, item):
             if index == item:
                 return JsonResponse(row)
 
+
+# save the stages from tournaments data
+@method_decorator(transaction.atomic, name="dispatch")
+class SetStagesAndSection(View):
+    def get(self, request):
+        try:
+            filePath = "/home/yonathancruz/data/2023 game incomplete/esports-data/tournaments.json"
+            with open(filePath) as f:
+                tournaments = json.load(f)
+                for index, tournament in enumerate(tournaments):
+                    index += 1
+                    queryset = self.get_object_or_false(
+                        tournament["id"], Tournament, "primaryKey"
+                    )
+                    if not queryset:
+                        print(
+                            "\nSkip curret stage => idTournament #:" + tournament["id"]
+                        )
+                    else:
+                        print(queryset)
+                        stages = tournament["stages"]
+                        for stage in stages:
+                            ################
+                            ## save stage ##
+                            ################
+                            model = Stage()
+                            model.idTournament = queryset
+                            model.name = stage["name"]
+                            model.type = stage["type"]
+                            model.slug = stage["slug"]
+                            model.save_base()
+                            # get last object
+                            """ querysetLast = self.get_object_or_false(
+                                stage["name"], Stage, "lastField"
+                            ) """
+                            ###################
+                            ## save sections ##
+                            ###################
+                            sections = stage["sections"]
+                            for section in sections:
+                                modelSection = Section(
+                                    idStage=model, name=section["name"]
+                                )
+                               
+                                modelSection.save_base()
+
+                                ################
+                                ## save match ##
+                                ################
+
+                                matches = section["matches"]
+                                for match in matches:
+                                    modelMatch = Match(
+                                        idSection=modelSection,
+                                        type=match["type"],
+                                        state=match["state"],
+                                        mode=match["mode"],
+                                        strategy=match["strategy"]["type"],
+                                    )
+                                    modelMatch.save_base()
+
+                                    #######################
+                                    ## save match detail ##
+                                    #######################
+                                    # get the list of teams in one game only two teams
+                                    teams = match["teams"]
+                                    # verify if the participant exist in player table
+
+                                    for team in teams:
+                                        players = team['players']
+                                        print("Verifying this list of participants: ", players)
+
+                                        # get the player match
+                                        matchPlayers = self.participants_match_or_false(
+                                            players
+                                        )
+                                        # get the team model
+                                        queryTeam = self.get_object_or_false(
+                                            team["id"], Team, "primaryKey"
+                                        )
+
+                                        if not queryTeam:
+                                            print(
+                                                "\nSkip curret detail => idTeam #:"
+                                                + team["id"]
+                                            )
+                                        else:
+                                            modelMatchDetail = MatchDetail(
+                                                idMatch=modelMatch,
+                                                idTeam=queryTeam,
+                                                matchTeamIntegrants=matchPlayers,
+                                                win=False
+                                                if team["result"]["outcome"] == "loss"
+                                                else True,
+                                            )
+                                            modelMatchDetail.save_base()
+            return JsonResponse(
+                {"message": "Your information was save correctly", "success": True}
+            )
+        except Exception as e:
+            print("ERROR: ", str(e))
+            return JsonResponse({"message": "Wasn't save correctly", "success": False})
+
+    def get_object_or_false(self, key, model, type):
+        try:
+            if type == "primaryKey":
+                return model.objects.get(pk=key)
+            if type == "lastField":
+                return model.objects.last()
+            else:
+                return model.objects.get(name=key)
+        except model.DoesNotExist:
+            return False
+
+    def participants_match_or_false(self, listIntegrants):
+        listMatches = []
+        try:
+            for integrant in listIntegrants:
+                print("Verifying player #: ", integrant["id"])
+                response = Player.objects.get(pk=integrant["id"])
+                listMatches.append(response)
+            
+            if False in listMatches:
+                return False
+            else:
+                return True
+        except Exception as e:
+            return False

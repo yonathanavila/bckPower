@@ -34,9 +34,12 @@ class League(models.Model):
         verbose_name="Display Priority Status", null=False, blank=False
     )
 
+    class meta:
+        db_table = "league"
+
 
 class Tournament(models.Model):
-    id = models.IntegerField(primary_key=True, auto_created=True, verbose_name="Id")
+    idTournament = models.BigIntegerField(primary_key=True, verbose_name="Id")
     idLeague = models.BigIntegerField(verbose_name="League", null=False, blank=False)
     name = models.CharField(
         verbose_name="Name", max_length=255, null=False, blank=False
@@ -50,10 +53,14 @@ class Tournament(models.Model):
     startDate = models.DateField(verbose_name="Start Date", null=False, blank=False)
     endDate = models.DateField(verbose_name="End Date", null=False, blank=False)
 
+    class meta:
+        db_table = "tournament"
+
 
 class Team(models.Model):
-    id = models.IntegerField(primary_key=True, auto_created=True, verbose_name="Id")
-    idTeam = models.BigIntegerField(verbose_name="Team", null=False, blank=False)
+    idTeam = models.BigIntegerField(
+        primary_key=True, verbose_name="Team", null=False, blank=False
+    )
     name = models.CharField(
         verbose_name="Name", max_length=255, null=False, blank=False
     )
@@ -63,6 +70,9 @@ class Team(models.Model):
     slug = models.SlugField(
         verbose_name="Slug", max_length=255, null=False, blank=False
     )
+
+    class meta:
+        db_table = "team"
 
 
 class Player(models.Model):
@@ -77,6 +87,9 @@ class Player(models.Model):
         verbose_name="Name", max_length=255, null=False, blank=False
     )
 
+    class meta:
+        db_table = "player"
+
 
 class Game(models.Model):
     idGame = models.BigIntegerField(
@@ -87,30 +100,95 @@ class Game(models.Model):
     )
     year = models.IntegerField(verbose_name="Year", default=2023)
 
+    class meta:
+        db_table = "game"
+
 
 class GameDetail(models.Model):
-    idGameDetail = models.IntegerField(primary_key=True,verbose_name="GameDetail", auto_created=True)
     idGame = models.ForeignKey(
         Game,
-        db_column="IdGame",
+        db_column="idGame",
         verbose_name="Game",
         null=False,
         blank=False,
         on_delete=models.CASCADE,
-        unique=False,
     )
     idPlayer = models.BigIntegerField(
-        db_column="IdPlayer",
-        verbose_name="Player",
-        null=False,
-        blank=False
+        db_column="IdPlayer", verbose_name="Player", null=False, blank=False
     )
     playerMatch = models.BooleanField(
         verbose_name="Player equal to player table",
         null=False,
         blank=False,
-        default=True
+        default=True,
     )
 
     class meta:
-        db_table = "base_game_detail"
+        db_table = "gameDetail"
+
+
+class Stage(models.Model):
+    idTournament = models.ForeignKey(
+        Tournament,
+        db_column="idTournament",
+        verbose_name="Tournament",
+        null=True,
+        on_delete=models.DO_NOTHING,
+    )
+    name = models.CharField(
+        verbose_name="Stage", max_length=255, null=False, blank=False
+    )
+    type = models.CharField(verbose_name="Type", max_length=255, blank=True, null=True)
+    slug = models.CharField(
+        verbose_name="Slug", max_length=255, null=False, blank=False
+    )
+
+    class meta:
+        db_table = "stage"
+
+
+class Section(models.Model):
+    idStage = models.ForeignKey(
+        Stage, db_column="idStage", verbose_name="Stage", on_delete=models.DO_NOTHING
+    )
+    name = models.CharField(
+        verbose_name="Section", max_length=255, null=False, blank=False
+    )
+
+    class meta:
+        db_table = "section"
+
+
+class Match(models.Model):
+    idSection = models.ForeignKey(
+        Section, db_column="idSection", verbose_name="Section Detail", on_delete=models.DO_NOTHING
+    )
+    type = models.CharField(
+        verbose_name="Type", max_length=255, null=False, blank=False
+    )
+    state = models.CharField(
+        verbose_name="State", max_length=255, null=False, blank=False
+    )
+    mode = models.CharField(
+        verbose_name="Mode", max_length=255, null=False, blank=False
+    )
+    strategy = models.CharField(
+        verbose_name="Strategy", max_length=255, null=False, blank=False
+    )
+
+    class meta:
+        db_table = "match"
+
+
+class MatchDetail(models.Model):
+    idMatch = models.ForeignKey(
+        Match, db_column="idMatch", verbose_name="Match", on_delete=models.DO_NOTHING
+    )
+    idTeam = models.ForeignKey(Team, db_column="idTeam", verbose_name="Team", on_delete=models.DO_NOTHING)
+    matchTeamIntegrants = models.BooleanField(
+        verbose_name="Match Integrants", default=False, null=False
+    )
+    win = models.BooleanField(verbose_name="Win Game?", null=False, blank=False)
+
+    class meta:
+        db_table = "matchDetail"
