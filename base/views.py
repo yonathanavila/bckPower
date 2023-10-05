@@ -317,7 +317,7 @@ class SetStagesAndSection(View):
                                 modelSection = Section(
                                     idStage=model, name=section["name"]
                                 )
-                               
+
                                 modelSection.save_base()
 
                                 ################
@@ -331,7 +331,9 @@ class SetStagesAndSection(View):
                                         type=match["type"],
                                         state=match["state"],
                                         mode=match["mode"],
-                                        strategy=match["strategy"]["type"],
+                                        strategy=match["strategy"]["type"]
+                                        + " "
+                                        + str(match["strategy"]["count"]),
                                     )
                                     modelMatch.save_base()
 
@@ -343,8 +345,11 @@ class SetStagesAndSection(View):
                                     # verify if the participant exist in player table
 
                                     for team in teams:
-                                        players = team['players']
-                                        print("Verifying this list of participants: ", players)
+                                        players = team["players"]
+                                        print(
+                                            "Verifying this list of participants: ",
+                                            players,
+                                        )
 
                                         # get the player match
                                         matchPlayers = self.participants_match_or_false(
@@ -395,7 +400,7 @@ class SetStagesAndSection(View):
                 print("Verifying player #: ", integrant["id"])
                 response = Player.objects.get(pk=integrant["id"])
                 listMatches.append(response)
-            
+
             if False in listMatches:
                 return False
             else:
