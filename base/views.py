@@ -262,11 +262,11 @@ def openGameJson(request, year, game, item):
     filePath = (
         "/home/yonathancruz/data/"
         + str(year)
-        + " game incomplete/games/"
+        + "_game_incomplete/games/"
         + game
         + ".json"
     )
-    print(str(year), game)
+    print(filePath)
     with open(filePath) as f:
         reader = json.load(f)
         for index, row in enumerate(reader):
