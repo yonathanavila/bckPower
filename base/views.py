@@ -11,7 +11,7 @@ from .models import (
     Match,
     MatchDetail,
 )
-from django.http import HttpResponse, JsonResponse
+from django.http import HttpResponse, JsonResponse, Http404
 from django.utils.decorators import method_decorator
 from django.views import View
 from django.db import transaction
@@ -45,8 +45,11 @@ def SetLeague(request):
                 True if row["displayPriorityStatus"] == "selected" else False
             )
             modelRow.save_base()
-    return HttpResponse("Hello world")
-
+    return JsonResponse({
+        "success":True,
+        "message":"Data saved correctly!",
+        "data":"Hello World"
+    })
 
 @transaction.atomic
 def getAllLeagues(request):
@@ -407,3 +410,5 @@ class SetStagesAndSection(View):
                 return True
         except Exception as e:
             return False
+
+

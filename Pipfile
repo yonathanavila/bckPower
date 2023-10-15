@@ -3,10 +3,20 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 name = "pypi"
 
+[scripts]
+dev	=	"python manage.py runserver"
+mig =	"python manage.py migrate"
+app	=	"python manage.py startapp"
+make = "python manage.py makemigrations"
+createsu = "python manage.py createsuperuser"
+
 [packages]
 psycopg = "*"
 pillow = "*"
 django = "*"
+djangorestframework = "*"
+django-cors-headers = "*"
+django-filter = "*"
 
 [dev-packages]
 

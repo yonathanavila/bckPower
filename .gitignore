@@ -1,3 +1,4 @@
 .env
 Dockerfile
 docker-composse.yml
+awscliv2.zip
