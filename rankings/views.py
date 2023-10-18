@@ -38,3 +38,10 @@ class RankingGlobalStatsView(APIView):
         serializer = MatchDetailSerializer(queryset, many=True);
         return Response(serializer.data, status=status.HTTP_200_OK);
 
+class RankingTeamStatsiView(APIView):
+    def get(self, request):
+        numberOfTeams = request.query_params.get('team_rankings') or 20;
+        queryset = []
+        serializer = MatchDetailSerializer(queryset, many=True);
+        return Response(serializer.data, status=status.HTTP_200_OK);
+
