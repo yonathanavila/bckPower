@@ -1,4 +1,4 @@
-"created_date","modified_date","match_pk","match_type","match_state","match_mode","match_strategy","section_pk"
+"created_date","modified_date","match_pk","match_type_id","match_state_id","match_mode_id","match_strategy_id","section_pk"
 2023-10-21 23:30:37.404 -0600,2023-10-21 23:30:37.404 -0600,1,1,1,1,2,1
 2023-10-21 23:32:15.942 -0600,2023-10-21 23:32:15.942 -0600,2,1,1,1,2,2
 2023-10-21 23:33:18.186 -0600,2023-10-21 23:33:18.186 -0600,3,1,1,1,2,3
