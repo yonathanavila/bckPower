@@ -1,7 +1,7 @@
 from django.urls import path, include
 from django.contrib import admin
 from rest_framework import routers
-from rankings import views
+from api import views
 
 router = routers.DefaultRouter();
 router.register("ranking", views.RankingStatsViewSet, basename="Ranking");
