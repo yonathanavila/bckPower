@@ -15,6 +15,13 @@ from django.http import HttpResponse, JsonResponse, Http404
 from django.utils.decorators import method_decorator
 from django.views import View
 from django.db import transaction
+from pathlib import Path
+from .script import get_object_or_false
+
+# Build paths inside the project like this: BASE_DIR / 'subdir'.
+BASE_DIR = str(Path(__file__).resolve().parent.parent)
+
+from .script import download_esports_files, download_games
 
 
 def index(request):
@@ -24,32 +31,78 @@ def index(request):
 # Create your views here.
 @transaction.atomic
 def SetLeague(request):
-    urlCsv = "/home/yonathancruz/Descargas/leagues-json.csv"
-    with open(urlCsv) as f:
-        reader = csv.DictReader(f)
-        for index, row in enumerate(reader):
-            index = index + 1
-            modelRow = League()
-            modelRow.id = index
-            modelRow.idLeague = row["idLeague"]
-            modelRow.name = row["name"]
-            modelRow.slug = row["slug"]
-            modelRow.sport = row["sport"]
-            modelRow.image = row["image"]
-            modelRow.lightImage = row["lightImage"]
-            modelRow.darkImage = row["darkImage"]
-            modelRow.region = row["region"]
-            modelRow.priority = row["priority"]
-            modelRow.displayPriorityPosition = row["displayPriorityPosition"]
-            modelRow.displayPriorityStatus = (
-                True if row["displayPriorityStatus"] == "selected" else False
-            )
-            modelRow.save_base()
-    return JsonResponse({
-        "success":True,
-        "message":"Data saved correctly!",
-        "data":"Hello World"
-    })
+    listLeagues = [];
+    dir =  BASE_DIR + "/data/2021/esports-data/leagues.json"
+    with open(dir) as f:
+        reader = json.load(f)
+        for row in reader:
+            print(row)
+            if not row["id"] in listLeagues:
+                modelRow = League()
+                modelRow.league_id = row["id"]
+                modelRow.league_name = row["name"]
+                modelRow.league_slug = row["slug"]
+                modelRow.league_sport = row["sport"]
+                modelRow.league_image = row["image"]
+                modelRow.league_light_image = row["lightImage"]
+                modelRow.league_dark_image = row["darkImage"]
+                modelRow.league_region = row["region"]
+                modelRow.league_priority = row["priority"]
+                modelRow.league_display_priority_position = row["displayPriority"]["position"]
+                modelRow.league_display_priority_status = (
+                    True if row["displayPriority"]["status"] == "selected" else False
+                )
+                modelRow.save()
+                listLeagues.append(row["id"]);
+    dir =  BASE_DIR + "/data/2022/esports-data/leagues.json"
+    with open(dir) as f:
+        reader = json.load(f)
+        for row in reader:
+            print(row)
+            if not row["id"] in listLeagues:
+                modelRow = League()
+                modelRow.league_id = row["id"]
+                modelRow.league_name = row["name"]
+                modelRow.league_slug = row["slug"]
+                modelRow.league_sport = row["sport"]
+                modelRow.league_image = row["image"]
+                modelRow.league_light_image = row["lightImage"]
+                modelRow.league_dark_image = row["darkImage"]
+                modelRow.league_region = row["region"]
+                modelRow.league_priority = row["priority"]
+                modelRow.league_display_priority_position = row["displayPriority"]["position"]
+                modelRow.league_display_priority_status = (
+                    True if row["displayPriority"]["status"] == "selected" else False
+                )
+                modelRow.save()
+                listLeagues.append(row["id"]);
+
+    dir =  BASE_DIR + "/data/2023/esports-data/leagues.json"
+    with open(dir) as f:
+        reader = json.load(f)
+        for row in reader:
+            print(row)
+            if not row["id"] in listLeagues:
+                modelRow = League()
+                modelRow.league_id = row["id"]
+                modelRow.league_name = row["name"]
+                modelRow.league_slug = row["slug"]
+                modelRow.league_sport = row["sport"]
+                modelRow.league_image = row["image"]
+                modelRow.league_light_image = row["lightImage"]
+                modelRow.league_dark_image = row["darkImage"]
+                modelRow.league_region = row["region"]
+                modelRow.league_priority = row["priority"]
+                modelRow.league_display_priority_position = row["displayPriority"]["position"]
+                modelRow.league_display_priority_status = (
+                    True if row["displayPriority"]["status"] == "selected" else False
+                )
+                modelRow.save()
+                listLeagues.append(row["id"]);
+    return JsonResponse(
+        {"success": True, "message": "Data saved correctly!", "data": "Hello World"}
+    )
+
 
 @transaction.atomic
 def getAllLeagues(request):
@@ -59,236 +112,362 @@ def getAllLeagues(request):
 
 @transaction.atomic
 def SetTournaments(request):
-    filePath = "/home/yonathancruz/Descargas/tournaments-json.csv"
-    with open(filePath) as f:
-        reader = csv.DictReader(f)
-        for index, row in enumerate(reader):
-            print(row)
-            index = index + 1
-            modelRow = Tournament()
-            modelRow.idTournament = row["id"]
-            modelRow.idLeague = row["leagueId"]
-            modelRow.name = row["name"]
-            modelRow.slug = row["slug"]
-            modelRow.sport = row["sport"]
-            modelRow.startDate = row["startDate"]
-            modelRow.endDate = row["endDate"]
-            modelRow.save_base()
+    listTournaments = []
+    dir =BASE_DIR + "/data/2023/esports-data/tournaments.json"
+    with open(dir) as f:
+        reader = json.load(f)
+        for row in reader:
+            if not row["id"] in listTournaments:
 
+                modelRow = Tournament()
+                modelRow.tournament_id = row["id"]
+                modelRow.league_id = row["leagueId"]
+                modelRow.tournament_name = row["name"]
+                modelRow.tournament_slug = row["slug"]
+                modelRow.tournament_sport = row["sport"]
+                modelRow.tournament_start_date = row["startDate"]
+                modelRow.tournament_end_date = row["endDate"]
+                modelRow.save()
+                listTournaments.append(row["id"]);
+
+    dir =BASE_DIR + "/data/2022/esports-data/tournaments.json"
+    with open(dir) as f:
+        reader = json.load(f)
+        for row in reader:
+            if not row["id"] in listTournaments:
+
+                modelRow = Tournament()
+                modelRow.tournament_id = row["id"]
+                modelRow.league_id = row["leagueId"]
+                modelRow.tournament_name = row["name"]
+                modelRow.tournament_slug = row["slug"]
+                modelRow.tournament_sport = row["sport"]
+                modelRow.tournament_start_date = row["startDate"]
+                modelRow.tournament_end_date = row["endDate"]
+                modelRow.save()
+                listTournaments.append(row["id"]);
+
+    dir =BASE_DIR + "/data/2021/esports-data/tournaments.json"
+    with open(dir) as f:
+        reader = json.load(f)
+        for row in reader:
+            if not row["id"] in listTournaments:
+
+                modelRow = Tournament()
+                modelRow.tournament_id = row["id"]
+                modelRow.league_id = row["leagueId"]
+                modelRow.tournament_name = row["name"]
+                modelRow.tournament_slug = row["slug"]
+                modelRow.tournament_sport = row["sport"]
+                modelRow.tournament_start_date = row["startDate"]
+                modelRow.tournament_end_date = row["endDate"]
+                modelRow.save()
+                listTournaments.append(row["id"]);
     return HttpResponse("Data saved in Tournament table")
 
 
 @transaction.atomic
-def SetTeams(request, year):
-    filePath = (
-        "/home/yonathancruz/data/"
-        + str(year)
-        + " game incomplete/esports-data/teams.json"
-    )
-    with open(filePath) as f:
+def SetTeams(request):
+    listTeams = []
+    dir =BASE_DIR + "/data/2021/esports-data/teams.json"
+    
+    with open(dir) as f:
         reader = json.load(f)
-        for index, row in enumerate(reader):
-            index += 1
-            modelRow = Team()
-            modelRow.idTeam = row["team_id"]
-            modelRow.name = row["name"]
-            modelRow.acronym = row["acronym"]
-            modelRow.slug = row["slug"]
-            modelRow.save_base()
+        for row in reader:
+            if not row['team_id'] in listTeams:
+                modelRow = Team()
+                modelRow.team_id = row["team_id"]
+                modelRow.team_name = row["name"]
+                modelRow.team_acronym = row["acronym"]
+                modelRow.team_slug = row["slug"]
+                modelRow.save()
+                listTeams.append(row['team_id'])
+    dir = BASE_DIR + "/data/2022/esports-data/teams.json"
+    with open(dir) as f:
+        reader = json.load(f)
+        for row in reader:
+            if not row['team_id'] in listTeams:
+                modelRow = Team()
+                modelRow.team_id = row["team_id"]
+                modelRow.team_name = row["name"]
+                modelRow.team_acronym = row["acronym"]
+                modelRow.team_slug = row["slug"]
+                modelRow.save()
+                listTeams.append(row['team_id'])
+    
+    dir = BASE_DIR + "/data/2023/esports-data/teams.json"
+    with open(dir) as f:
+        reader = json.load(f)
+        for row in reader:
+            if not row['team_id'] in listTeams:
+                modelRow = Team()
+                modelRow.team_id = row["team_id"]
+                modelRow.team_name = row["name"]
+                modelRow.team_acronym = row["acronym"]
+                modelRow.team_slug = row["slug"]
+                modelRow.save()
+                listTeams.append(row['team_id'])
+    
 
     return HttpResponse("Data saved in Teams table")
 
 
 @transaction.atomic
 def SetPlayers(request):
-    filePath = "/home/yonathancruz/Descargas/players-json.csv"
-    with open(filePath) as f:
-        reader = csv.DictReader(f)
-        for row in reader:
-            modelRow = Player()
-            modelRow.idPlayer = row["idPlayer"]
-            modelRow.idTeam = row["idTeam"] if (len(str(row["idTeam"])) > 0) else None
-            modelRow.handle = row["handle"]
-            modelRow.name = str(row["first_name"] + " " + row["last_name"])
-            modelRow.save_base()
-
-    return HttpResponse("Data saved in PLayers table")
-
-
-@transaction.atomic
-def SetPlayersJson(request):
-    filePath = "/home/yonathancruz/data/2021 game incomplete/esports-data/players.json"
-
-    with open(filePath) as f:
+    listPlayers = []
+    dir =BASE_DIR + "/data/2022/esports-data/players.json"
+    with open(dir) as f:
         reader = json.load(f)
         for row in reader:
-            if row["home_team_id"]:
-                model = Player(
-                    idPlayer=row["player_id"],
-                    idTeam=row["home_team_id"],
-                    handle=row["handle"],
-                    name=row["first_name"] + " " + row["last_name"],
-                )
-                model.save_base()
+            if not row['player_id'] in listPlayers:
+                modelRow = Player()
+                modelRow.player_id = row["player_id"]
+                modelRow.team_id = row["home_team_id"] if row["home_team_id"] else None
+                modelRow.player_handle = row["handle"]
+                modelRow.player_name = str(row["first_name"] + " " + row["last_name"])
+                modelRow.save()
+                listPlayers.append(row["player_id"])
 
+    dir =BASE_DIR + "/data/2021/esports-data/players.json"
+    with open(dir) as f:
+        reader = json.load(f)
+        for row in reader:
+            if not row['player_id'] in listPlayers:
+                modelRow = Player()
+                modelRow.player_id = row["player_id"]
+                modelRow.team_id = row["home_team_id"] if row["home_team_id"] else None
+                modelRow.player_handle = row["handle"]
+                modelRow.player_name = str(row["first_name"] + " " + row["last_name"])
+                modelRow.save()
+                listPlayers.append(row["player_id"])
+    dir =BASE_DIR + "/data/2023/esports-data/players.json"
+    with open(dir) as f:
+        reader = json.load(f)
+        for row in reader:
+            if not row['player_id'] in listPlayers:
+                modelRow = Player()
+                modelRow.player_id = row["player_id"]
+                modelRow.team_id = row["home_team_id"] if row["home_team_id"] else None
+                modelRow.player_handle = row["handle"]
+                modelRow.player_name = str(row["first_name"] + " " + row["last_name"])
+                modelRow.save()
+                listPlayers.append(row["player_id"])
     return HttpResponse("Data saved in PLayers table")
 
 
-@transaction.atomic
-def SetGameInfo(request):
-    filePath = "/home/yonathancruz/Descargas/gameInfo-json.csv"
-    with open(filePath) as f:
-        reader = csv.DictReader(f)
-        for index, row in enumerate(reader):
-            index = index + 1
-            if index > 20000:
-                modelRow = Game()
-                modelRow.idGame = row["idGame"]
-                modelRow.idPlatform = row["idPlatform"]
-                modelRow.save_base()
+class SetGame(View):
+    def get(self, request):
+        listGames = []
+        try:
+          
+            dir = BASE_DIR + "/data/2023/esports-data/mapping_data.json"
+            with open(dir) as f:
+                reader = json.load(f)
+                # READ the json file
+                for gameNumber, row in enumerate(reader):
+                    # if gameNumber > 20000 and gameNumber < 30000 and not row["esportsGameId"] in listGames:
+                    if not row["esportsGameId"] in listGames:
+                        with transaction.atomic():
+                        # save into model game
+                            gameModel = Game()
+                            gameModel.game_id = row["esportsGameId"]
+                            gameModel.game_platform_id=row["platformGameId"]
+                            gameModel.game_year = 2023
+                            gameModel.save()
+                            listGames.append(row["esportsGameId"]);
+            print("Open 2022")
 
-    return HttpResponse("Data saved in Game table")
+            dir = BASE_DIR + "/data/2022/esports-data/mapping_data.json"
+            with open(dir) as f:
+                reader = json.load(f)
+                # READ the json file
+                for gameNumber, row in enumerate(reader):
+                    # if gameNumber > 20000 and gameNumber < 30000 and not row["esportsGameId"] in listGames:
+                    if not row["esportsGameId"] in listGames:
+                        with transaction.atomic():
+                        # save into model game
+                            gameModel = Game()
+                            gameModel.game_id = row["esportsGameId"]
+                            gameModel.game_platform_id=row["platformGameId"]
+                            gameModel.game_year = 2023
+                            gameModel.save()
+                            listGames.append(row["esportsGameId"]);
 
+            dir = BASE_DIR + "/data/2021/esports-data/mapping_data.json"
+            with open(dir) as f:
+                reader = json.load(f)
+                # READ the json file
+                for gameNumber, row in enumerate(reader):
+                    # if gameNumber > 20000 and gameNumber < 30000 and not row["esportsGameId"] in listGames:
+                    if not row["esportsGameId"] in listGames:
+                        with transaction.atomic():
+                        # save into model game
+                            gameModel = Game()
+                            gameModel.game_id = row["esportsGameId"]
+                            gameModel.game_platform_id=row["platformGameId"]
+                            gameModel.game_year = 2023
+                            gameModel.save()
+                            listGames.append(row["esportsGameId"]);
+       
+             
+                            print("Save correct: ", row["esportsGameId"]);
+                            # listGames.append(row['esportsGameId']);
+                            # listParticipants = row["participantMapping"];
+                            # if self.validate_player_list(listParticipants):
+                                # self.save_game_detail(row["esportsGameId"], listParticipants);
+                            # else:
+                                # print(
+                                    # "\nPlayer list isn't complete, quit current player list"
+                                # )
+        except Exception as e:
+            print(str(e))
+            return HttpResponse(str(e))
+        return HttpResponse("Data saved correctly")
 
 class SetGameDetail(View):
-    Game = Game
-
-    def get(self, resquest):
+    def get(self, request):
+        listGames = [];
         try:
             with transaction.atomic():
-                filePath = "/home/yonathancruz/data/2023 game incomplete/esports-data/mapping_data.json"
-                with open(filePath) as f:
+                dir = BASE_DIR + "/data/2023/esports-data/mapping_data.json"
+                with open(dir) as f:
                     reader = json.load(f)
                     # READ the json file
                     for gameNumber, row in enumerate(reader):
-                        gameNumber += 1
-                        gameId = row["esportsGameId"]
-                        queryGame = self.get_object(gameId, "Game")
-                        if queryGame:
-                            if gameNumber < 40000:
-                                listParticipants = row["participantMapping"]
-                                print("Participants: ", listParticipants)
-                                # verify if a the list of participants is equal to 10
-                                if len(listParticipants) == 10:
-                                    # get game instance to save in db
-                                    result = self.get_game_detail_or_false(
-                                        queryGame, listParticipants
-                                    )
-
-                                    # save to db
-                                    result.save_base()
-
+                        # if gameNumber > 20000 and gameNumber < 30000 and not row["esportsGameId"] in listGames:
+                        if not row["esportsGameId"] in listGames:
+                            with transaction.atomic():
+                            # save into model game
+                                listGames.append(row["esportsGameId"]);
+                                listParticipants = row["participantMapping"];
+                                if self.validate_player_list(listParticipants):
+                                    self.save_game_detail(row["esportsGameId"], listParticipants);
                                 else:
                                     print(
                                         "\nPlayer list isn't complete, quit current player list"
                                     )
-                        else:
-                            HttpResponse(404, "Game not found")
+                                    print(listParticipants);
+
+            print("Open 2022")
+
+            dir = BASE_DIR + "/data/2022/esports-data/mapping_data.json"
+            with open(dir) as f:
+                reader = json.load(f)
+                # READ the json file
+                for gameNumber, row in enumerate(reader):
+                    # if gameNumber > 20000 and gameNumber < 30000 and not row["esportsGameId"] in listGames:
+                    if not row["esportsGameId"] in listGames:
+                        with transaction.atomic():
+                        # save into model game
+                            listGames.append(row["esportsGameId"]);
+                            listParticipants = row["participantMapping"];
+                            if self.validate_player_list(listParticipants):
+                                self.save_game_detail(row["esportsGameId"], listParticipants);
+                            else:
+                                print(
+                                    "\nPlayer list isn't complete, quit current player list"
+                                )
+                                print(listParticipants);
+            
+            print("Open 2021");
+            dir = BASE_DIR + "/data/2021/esports-data/mapping_data.json"
+            with open(dir) as f:
+                reader = json.load(f)
+                # READ the json file
+                for gameNumber, row in enumerate(reader):
+                    # if gameNumber > 20000 and gameNumber < 30000 and not row["esportsGameId"] in listGames:
+                    if not row["esportsGameId"] in listGames:
+                        with transaction.atomic():
+                        # save into model game
+                            gameModel.game_id = row["esportsGameId"]
+                            listGames.append(row["esportsGameId"]);
+                            if self.validate_player_list(listParticipants):
+                                self.save_game_detail(row["esportsGameId"], listParticipants);
+                            else:
+                                print(
+                                    "\nPlayer list isn't complete, quit current player list"
+                                )
+                                print(listParticipants);
+       # "\nPlayer list isn't complete, quit current player list"
         except Exception as e:
-            print(e)
             return HttpResponse(str(e))
         return HttpResponse("Data saved correctly")
 
-    def get_game_detail_or_false(self, gameInstance, listPlayers):
-        playersFounded = []
-        for playerCounter, player in enumerate(listPlayers):
-            playerCounter += 1
-            # Get Player Id
-            idPlayer = listPlayers[player]
-            queryPlayer = self.get_object(idPlayer, "Player")
-            print("Player record #", playerCounter, "Player query: ", queryPlayer)
-            if queryPlayer:
-                playerMatch = True
-                gameDetail = {"idPlayer": idPlayer, "playerMatch": playerMatch}
-                playersFounded.append(gameDetail)
-            else:
-                playerMatch = False
-                gameDetail = {"idPlayer": idPlayer, "playerMatch": playerMatch}
-                playersFounded.append(gameDetail)
-
-        # @dev if participants is not equal to 10 skip current game loop
-        if len(playersFounded) == 10:
-            # if not save the current game lop into detail
-            for playerInstance in playersFounded:
-                gameDetailInstace = GameDetail(
-                    idGame=gameInstance,
-                    idPlayer=playerInstance["idPlayer"],
-                    playerMatch=playerInstance["playerMatch"],
-                )
-                playersFounded.clear()
-                return gameDetailInstace
-            else:
-                print(len(playersFounded))
-                playersFounded.clear()
-                HttpResponse(404, "\nGame not equal to 10")
-
-    def get_object(self, id, modelName):
+    def save_game_detail(self, game_id, listPlayers):
         try:
-            if modelName == "Game":
-                try:
-                    query = Game.objects.get(pk=id)
-                except Game.DoesNotExist:
-                    return False
-
-                if query:
-                    return Game(
-                        idGame=query.idGame,
-                        idPlatform=query.idPlatform,
-                        year=query.year,
-                    )
+            playersFounded = []
+            for player in listPlayers:
+                # Get Player Id
+                player_id = listPlayers[player]
+                queryPlayer = self.get_object("Player", player_id)
+                if queryPlayer:
+                    gameDetail = {"player_id": player_id, "playerMatch": True}
+                    playersFounded.append(gameDetail)
                 else:
-                    return False
-
-            if modelName == "Player":
-                try:
-                    query = Player.objects.get(pk=id)
-                except Player.DoesNotExist:
-                    return False
-
-                if query:
-                    return Player(
-                        idPlayer=query.idPlayer,
-                        idTeam=query.idTeam,
-                        handle=query.handle,
-                        name=query.name,
+                    gameDetail = {"player_id": player_id, "playerMatch": False}
+                    playersFounded.append(gameDetail)
+            print("Game id to save as detail is: ", game_id);
+            for playerFounded in playersFounded:
+                with transaction.atomic():
+                    print(playerFounded)
+                    gameQuery = self.get_object("Game",game_id)
+                    gameDetailInstace = GameDetail(
+                        game_id=gameQuery,
+                        player_id=playerFounded["player_id"],
+                        game_detail_player_match=playerFounded["playerMatch"],
                     )
-                else:
-                    return False
-
+                    print(gameDetailInstace)
+                    gameDetailInstace.save();
+                    print("Game detail is saved!");
         except Exception as e:
-            print("Ocurrio un error: ", e)
-            return False
+            return JsonResponse({"message": "Wasn't save correctly", "success": False})
 
+    def get_object(self, modelName, id):
+        try:
+            if modelName == "Player":
+                return Player.objects.get(player_id=int(id));
+            else :
+                return Game.objects.get(game_id=int(id));
+        except Player.DoesNotExist:
+           return False
+    
+    def validate_player_list(self, players):
+        listValidation = []
+        try:
+            for player in players:
 
-# reading game json file
-def openGameJson(request, year, game, item):
-    filePath = (
-        "/home/yonathancruz/data/"
-        + str(year)
-        + "_game_incomplete/games/"
-        + game
-        + ".json"
-    )
-    print(filePath)
-    with open(filePath) as f:
-        reader = json.load(f)
-        for index, row in enumerate(reader):
-            index = index + 1
-            if index == item:
-                return JsonResponse(row)
+                if not players[player].isdigit():
+                    listValidation.append(False);
+                else:
+                    listValidation.append(True);
+
+            if False in listValidation:
+                return False;
+            else:
+                if len(listValidation)== 10:
+                    return True;
+                else:
+                    return False
+                listValidation.clear();
+        except Exception as e:
+
+            print("eRROR?",str(e));
+            return JsonResponse({"message": "Wasn't save correctly", "success": False})
+
 
 
 # save the stages from tournaments data
 @method_decorator(transaction.atomic, name="dispatch")
 class SetStagesAndSection(View):
     def get(self, request):
+        listStages = [];
         try:
-            filePath = "/home/yonathancruz/data/2023 game incomplete/esports-data/tournaments.json"
-            with open(filePath) as f:
+            dir = BASE_DIR + "/data/2023/esports-data/tournaments.json"
+            with open(dir) as f:
+                
                 tournaments = json.load(f)
-                for index, tournament in enumerate(tournaments):
-                    index += 1
-                    queryset = self.get_object_or_false(
+                for tournament in tournaments:
+                    queryset = get_object_or_false(
                         tournament["id"], Tournament, "primaryKey"
                     )
                     if not queryset:
@@ -303,11 +482,11 @@ class SetStagesAndSection(View):
                             ## save stage ##
                             ################
                             model = Stage()
-                            model.idTournament = queryset
-                            model.name = stage["name"]
-                            model.type = stage["type"]
-                            model.slug = stage["slug"]
-                            model.save_base()
+                            model.tournament_id = queryset
+                            model.stage_name = stage["name"]
+                            model.stage_type = stage["type"]
+                            model.stage_slug = stage["slug"]
+                            model.save()
                             # get last object
                             """ querysetLast = self.get_object_or_false(
                                 stage["name"], Stage, "lastField"
@@ -318,10 +497,11 @@ class SetStagesAndSection(View):
                             sections = stage["sections"]
                             for section in sections:
                                 modelSection = Section(
-                                    idStage=model, name=section["name"]
+                                    stage_id=model, 
+                                    section_name=section["name"]
                                 )
 
-                                modelSection.save_base()
+                                modelSection.save()
 
                                 ################
                                 ## save match ##
@@ -330,15 +510,15 @@ class SetStagesAndSection(View):
                                 matches = section["matches"]
                                 for match in matches:
                                     modelMatch = Match(
-                                        idSection=modelSection,
-                                        type=match["type"],
-                                        state=match["state"],
-                                        mode=match["mode"],
-                                        strategy=match["strategy"]["type"]
+                                        section_id=modelSection,
+                                        match_type=match["type"],
+                                        match_state=match["state"],
+                                        match_mode=match["mode"],
+                                        match_strategy=match["strategy"]["type"]
                                         + " "
                                         + str(match["strategy"]["count"]),
                                     )
-                                    modelMatch.save_base()
+                                    modelMatch.save()
 
                                     #######################
                                     ## save match detail ##
@@ -365,19 +545,18 @@ class SetStagesAndSection(View):
 
                                         if not queryTeam:
                                             print(
-                                                "\nSkip curret detail => idTeam #:"
+                                                "\nSkip curret detail => team_id #:"
                                                 + team["id"]
                                             )
                                         else:
                                             modelMatchDetail = MatchDetail(
-                                                idMatch=modelMatch,
-                                                idTeam=queryTeam,
-                                                matchTeamIntegrants=matchPlayers,
-                                                win=False
-                                                if team["result"]["outcome"] == "loss"
-                                                else True,
+                                                match_id=modelMatch,
+                                                team_id=queryTeam,
+                                                match_detail_match_team_integrant=matchPlayers,
+                                                match_detail_win=False
+                                                if team["result"]["outcome"] == "loss" else True,
                                             )
-                                            modelMatchDetail.save_base()
+                                            modelMatchDetail.save()
             return JsonResponse(
                 {"message": "Your information was save correctly", "success": True}
             )
@@ -385,23 +564,12 @@ class SetStagesAndSection(View):
             print("ERROR: ", str(e))
             return JsonResponse({"message": "Wasn't save correctly", "success": False})
 
-    def get_object_or_false(self, key, model, type):
-        try:
-            if type == "primaryKey":
-                return model.objects.get(pk=key)
-            if type == "lastField":
-                return model.objects.last()
-            else:
-                return model.objects.get(name=key)
-        except model.DoesNotExist:
-            return False
-
     def participants_match_or_false(self, listIntegrants):
         listMatches = []
         try:
             for integrant in listIntegrants:
                 print("Verifying player #: ", integrant["id"])
-                response = Player.objects.get(pk=integrant["id"])
+                response = Player.objects.get(player_id=integrant["id"])
                 listMatches.append(response)
 
             if False in listMatches:
@@ -411,4 +579,26 @@ class SetStagesAndSection(View):
         except Exception as e:
             return False
 
+    def get_object_or_false(self, key, model, type):
+        try:
+            if type == "primaryKey":
+                return model.objects.get(team_id=key)
+            if type == "lastField":
+                return model.objects.last()
+            else:
+                return model.objects.get(name=key)    
+        except model.DoesNotExist:
+            return False
 
+
+class DownloadData(View):
+    def get(self, request):
+        try:
+            year = int(str(self.request.GET.get("year", None)))
+            download_esports_files()
+            download_games(year)
+            return {"message": "save correctly", "success": True}
+
+        except Exception as e:
+            print(str(e))
+            return Http404({"message": "Wasn't save correctly", "success": False})
