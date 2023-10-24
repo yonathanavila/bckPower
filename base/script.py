@@ -10,6 +10,7 @@ from django.http import Http404
 
 S3_BUCKET_URL = "https://power-rankings-dataset-gprhack.s3.us-west-2.amazonaws.com"
 
+
 def get_object_or_false(key, model, type):
     try:
         if type == "primaryKey":
@@ -17,7 +18,7 @@ def get_object_or_false(key, model, type):
         if type == "lastField":
             return model.objects.last()
         else:
-            return model.objects.get(name=key)    
+            return model.objects.get(name=key)
     except model.DoesNotExist:
         return False
 
@@ -67,6 +68,7 @@ def download_esports_files():
         print(str(e))
         return Http404({"message": "Wasn't save correctly", "success": False})
 
+
 def download_games(year):
     try:
         start_time = time.time()
@@ -80,7 +82,8 @@ def download_games(year):
             os.makedirs(directory)
 
         mappings = {
-            esports_game["esportsGameId"]: esports_game for esports_game in mappings_data
+            esports_game["esportsGameId"]: esports_game
+            for esports_game in mappings_data
         }
 
         game_counter = 0

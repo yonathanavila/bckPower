@@ -13,7 +13,7 @@ urlpatterns = [
     path("set/gamedetail", views.SetGameDetail.as_view(), name="Set Game Detail"),
     path("league/all", views.getAllLeagues, name="getAllLeagues"),
     path("set/stage", views.SetStagesAndSection.as_view(), name="Set Stage"),
-    path("set/game", views.SetGame.as_view(), name="Set Game")
+    path("set/game", views.SetGame.as_view(), name="Set Game"),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
