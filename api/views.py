@@ -23,9 +23,10 @@ class RankingStatsView(APIView):
     def get(self, request, idTournament, format=None):
         stage =  request.query_params.get('stage');
         queryset = MatchDetail.objects.filter(
-            matchTeamIntegrants=True, 
-            idMatch__idSection__idStage__name__exact=stage,
-            idMatch__idSection__idStage__idTournament__idTournament__exact=idTournament);
+            match_detail_match_team_integrant=True, 
+            match_id__section_id__stage_id__stage_name__stage_name_name__exact=stage,
+            match_id__section_id__stage_id__tournament_id__tournament_id__exact=idTournament);
+        
         if not queryset:
             return Response({'message':'Your tournament id or stage are incorrect'}, status=status.HTTP_404_NOT_FOUND);
         serializer = MatchDetailSerializer(queryset, many=True);
