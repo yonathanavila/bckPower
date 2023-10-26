@@ -7,7 +7,7 @@ router = routers.DefaultRouter();
 router.register("ranking", views.RankingStatsViewSet, basename="Ranking");
 
 urlpatterns = [
-    path("api/v1/ranking/team_rankings/", views.RankingTeamStatsiView.as_view(), name="Get Team Rankings"),
+    path("api/v1/ranking/team_rankings/", views.RankingTeamStatsView.as_view(), name="Get Team Rankings"),
     path("api/v1/ranking/global_rankings/", views.RankingGlobalStatsView.as_view(), name="Get Global Ranking"),
     path("api/v1/ranking/tournament_rankings/<int:idTournament>/", views.RankingStatsView.as_view(), name="Get ranking by tournament"),
     path('api/v1/auth/', include('rest_framework.urls')),
