@@ -9,7 +9,7 @@
 |    Name      | Base Path | Route | Search Param | Example |
 | :----------: | :--------:| :----:| :-----------:| :-----: |
 | Tournament rankings | /api/v1/rankings/ | tournament_rankings/{tournament_id}/ | stage _string_ | http://127.0.0.1:8000/api/v1/ranking/tournament_rankings/108998961191900167?stage=Groups |
-| Global rankings | /api/v1/rankings/ | global_rankings/ | number_of_teams _number_ | http://127.0.0.1:8000/api/v1/ranking/tournament_rankings/108998961191900167?stage=Groups |
+| Global rankings | /api/v1/rankings/ | global_rankings/ | number_of_teams _number_ | http://127.0.0.1:8000/api/v1/ranking/global_rankings?number_of_teams=20 |
 | Team rankings | /api/v1/rankings/ | team_rankings/ | team_ids _array_ | http://127.0.0.1:8000/api/v1/ranking/team_rankings?team_ids=[98767991853197861,98767991926151025,98767991853197861] |
 ## Inspiration
 
