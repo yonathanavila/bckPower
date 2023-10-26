@@ -1,4 +1,4 @@
-# bckPower
+# Back Power API 
 
 ![League of legend Logo](https://oyster.ignimgs.com/mediawiki/apis.ign.com/league-of-legends/8/86/League_of_legends_logo_transparent.png?width=640)
 
