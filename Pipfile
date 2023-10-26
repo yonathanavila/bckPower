@@ -18,6 +18,7 @@ djangorestframework = "*"
 django-cors-headers = "*"
 django-filter = "*"
 requests = "*"
+python-dateutil = "*"
 
 [dev-packages]
 
