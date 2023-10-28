@@ -240,7 +240,7 @@ class RankingTeamStatsView(APIView):
 
             teams =  ast.literal_eval(team_ids);
 
-            for team_id in teams:
+            for team_id in set(teams):
                 queryTeam = Team.objects.get(team_id=team_id);
                 gameXTeam = MatchDetail.objects.filter(team_id__team_id__exact=team_id);
 
