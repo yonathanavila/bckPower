@@ -4,7 +4,7 @@ verify_ssl = true
 name = "pypi"
 
 [scripts]
-dev	=	"python manage.py runserver"
+dev	=	"python manage.py runserver 8001"
 mig =	"python manage.py migrate"
 app	=	"python manage.py startapp"
 make = "python manage.py makemigrations"
