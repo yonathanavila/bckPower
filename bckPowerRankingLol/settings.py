@@ -22,9 +22,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-hh*+-6&vl_h_a^w-v66l+t6*b8*$^kmk_=qza4*kp&@__e9)rl"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -133,4 +133,4 @@ STATIC_URL = "static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # Configuración de CORS
-CORS_ORIGIN_WHITELIST = ["http://localhost:8000"]
+CORS_ORIGIN_WHITELIST = ["http://0.0.0.0:3300", 'http://3.17.97.72']

@@ -1,0 +1,16 @@
+2023-10-31 04:08 +00:00: [2023-10-31 04:08:12 +0000] [148702] [INFO] Handling signal: int
+2023-10-31 04:08 +00:00: [2023-10-31 10:08:12 +0600] [148705] [INFO] Worker exiting (pid: 148705)
+2023-10-31 04:08 +00:00: [2023-10-31 10:08:12 +0600] [148704] [INFO] Worker exiting (pid: 148704)
+2023-10-31 04:08 +00:00: [2023-10-31 10:08:12 +0600] [148703] [INFO] Worker exiting (pid: 148703)
+2023-10-31 04:08 +00:00: [2023-10-31 04:08:12 +0000] [148702] [INFO] Shutting down: Master
+2023-10-31 04:08 +00:00: Loading .env environment variables...
+2023-10-31 04:09 +00:00: [31/Oct/2023 10:09:19] "GET /api/v1/ranking/tournament_rankings/108998961191900167?stage=Groups HTTP/1.1" 301 0
+2023-10-31 04:09 +00:00: [31/Oct/2023 10:09:21] "GET /api/v1/ranking/tournament_rankings/108998961191900167/?stage=Groups HTTP/1.1" 200 939
+2023-10-31 04:11 +00:00: [31/Oct/2023 10:11:13] "GET /api/v1/ranking/tournament_rankings/108998961191900167?stage=Groups HTTP/1.1" 301 0
+2023-10-31 04:11 +00:00: [31/Oct/2023 10:11:14] "GET /api/v1/ranking/tournament_rankings/108998961191900167/?stage=Groups HTTP/1.1" 200 939
+2023-10-31 04:11 +00:00: [31/Oct/2023 10:11:20] "GET /api/v1/ranking/tournament_rankings/108998961191900167?stage=Groups HTTP/1.1" 301 0
+2023-10-31 04:11 +00:00: [31/Oct/2023 10:11:22] "GET /api/v1/ranking/tournament_rankings/108998961191900167/?stage=Groups HTTP/1.1" 200 939
+2023-10-31 04:11 +00:00: [31/Oct/2023 10:11:37] "GET /api/v1/ranking/global_rankings?number_of_teams=20 HTTP/1.1" 301 0
+2023-10-31 04:11 +00:00: [31/Oct/2023 10:11:42] "GET /api/v1/ranking/global_rankings/?number_of_teams=20 HTTP/1.1" 200 1736
+2023-10-31 04:11 +00:00: [31/Oct/2023 10:11:50] "GET /api/v1/ranking/team_rankings?team_ids=[98767991853197861,98767991926151025,98767991853197861] HTTP/1.1" 301 0
+2023-10-31 04:11 +00:00: [31/Oct/2023 10:11:50] "GET /api/v1/ranking/team_rankings/?team_ids=[98767991853197861,98767991926151025,98767991853197861] HTTP/1.1" 200 155
