@@ -48,5 +48,4 @@ The project is built with Django REST Framework and PostgreSQL DB.
 ## What's next for Power Ranking API
 
 - Maintenance of the information at the time
-- Better documentation and building process
-- Add IA to add graphs about stats (Lineal regressions, etc)
+- IA integration for make graphs about stats (Lineal regressions, etc)
