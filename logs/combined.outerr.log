@@ -1,0 +1,228 @@
+2023-10-31 04:08 +00:00: [2023-10-31 04:08:12 +0000] [148702] [INFO] Handling signal: int
+2023-10-31 04:08 +00:00: [2023-10-31 10:08:12 +0600] [148705] [INFO] Worker exiting (pid: 148705)
+2023-10-31 04:08 +00:00: [2023-10-31 10:08:12 +0600] [148704] [INFO] Worker exiting (pid: 148704)
+2023-10-31 04:08 +00:00: Groups
+2023-10-31 04:08 +00:00: Groups
+2023-10-31 04:08 +00:00: Groups
+2023-10-31 04:08 +00:00: [2023-10-31 10:08:12 +0600] [148703] [INFO] Worker exiting (pid: 148703)
+2023-10-31 04:08 +00:00: [2023-10-31 04:08:12 +0000] [148702] [INFO] Shutting down: Master
+2023-10-31 04:08 +00:00: Loading .env environment variables...
+2023-10-31 04:09 +00:00: [31/Oct/2023 10:09:19] "GET /api/v1/ranking/tournament_rankings/108998961191900167?stage=Groups HTTP/1.1" 301 0
+2023-10-31 04:09 +00:00: Performing system checks...
+2023-10-31 04:09 +00:00: 
+2023-10-31 04:09 +00:00: System check identified no issues (0 silenced).
+2023-10-31 04:09 +00:00: October 31, 2023 - 10:08:25
+2023-10-31 04:09 +00:00: Django version 4.2.6, using settings 'bckPowerRankingLol.settings'
+2023-10-31 04:09 +00:00: Starting development server at http://0.0.0.0:3301/
+2023-10-31 04:09 +00:00: Quit the server with CONTROL-C.
+2023-10-31 04:09 +00:00: 
+2023-10-31 04:09 +00:00: Groups
+2023-10-31 04:09 +00:00: {'team_id': 100285330168091787, 'team_name': 'DetonatioN FocusMe', 'team_acronym': 'DFM', 'team_slug': 'detonation-focusme'}
+2023-10-31 04:09 +00:00: {'team_id': 103461966951059521, 'team_name': 'Evil Geniuses LG', 'team_acronym': 'EG', 'team_slug': 'evil-geniuses'}
+2023-10-31 04:09 +00:00: {'team_id': 99566406332987990, 'team_name': 'The Chiefs', 'team_acronym': 'CHF', 'team_slug': 'the-chiefs'}
+2023-10-31 04:09 +00:00: {'team_id': 106269804045322803, 'team_name': 'Beyond Gaming', 'team_acronym': 'BYG', 'team_slug': 'mega-bank-beyond-gaming'}
+2023-10-31 04:09 +00:00: {'team_id': 100285330168091787, 'team_name': 'DetonatioN FocusMe', 'team_acronym': 'DFM', 'team_slug': 'detonation-focusme'}
+2023-10-31 04:09 +00:00: {'team_id': 103461966951059521, 'team_name': 'Evil Geniuses LG', 'team_acronym': 'EG', 'team_slug': 'evil-geniuses'}
+2023-10-31 04:09 +00:00: {'team_id': 100285330168091787, 'team_name': 'DetonatioN FocusMe', 'team_acronym': 'DFM', 'team_slug': 'detonation-focusme'}
+2023-10-31 04:09 +00:00: {'team_id': 99566406332987990, 'team_name': 'The Chiefs', 'team_acronym': 'CHF', 'team_slug': 'the-chiefs'}
+2023-10-31 04:09 +00:00: {'team_id': 106269804045322803, 'team_name': 'Beyond Gaming', 'team_acronym': 'BYG', 'team_slug': 'mega-bank-beyond-gaming'}
+2023-10-31 04:09 +00:00: {'team_id': 100285330168091787, 'team_name': 'DetonatioN FocusMe', 'team_acronym': 'DFM', 'team_slug': 'detonation-focusme'}
+2023-10-31 04:09 +00:00: {'team_id': 100285330168091787, 'team_name': 'DetonatioN FocusMe', 'team_acronym': 'DFM', 'team_slug': 'detonation-focusme'}
+2023-10-31 04:09 +00:00: {'team_id': 103461966951059521, 'team_name': 'Evil Geniuses LG', 'team_acronym': 'EG', 'team_slug': 'evil-geniuses'}
+2023-10-31 04:09 +00:00: {'team_id': 99566406332987990, 'team_name': 'The Chiefs', 'team_acronym': 'CHF', 'team_slug': 'the-chiefs'}
+2023-10-31 04:09 +00:00: {'team_id': 103461966951059521, 'team_name': 'Evil Geniuses LG', 'team_acronym': 'EG', 'team_slug': 'evil-geniuses'}
+2023-10-31 04:09 +00:00: {'team_id': 106269804045322803, 'team_name': 'Beyond Gaming', 'team_acronym': 'BYG', 'team_slug': 'mega-bank-beyond-gaming'}
+2023-10-31 04:09 +00:00: {'team_id': 103461966951059521, 'team_name': 'Evil Geniuses LG', 'team_acronym': 'EG', 'team_slug': 'evil-geniuses'}
+2023-10-31 04:09 +00:00: {'team_id': 99566406332987990, 'team_name': 'The Chiefs', 'team_acronym': 'CHF', 'team_slug': 'the-chiefs'}
+2023-10-31 04:09 +00:00: {'team_id': 106269804045322803, 'team_name': 'Beyond Gaming', 'team_acronym': 'BYG', 'team_slug': 'mega-bank-beyond-gaming'}
+2023-10-31 04:09 +00:00: {'team_id': 99566406332987990, 'team_name': 'The Chiefs', 'team_acronym': 'CHF', 'team_slug': 'the-chiefs'}
+2023-10-31 04:09 +00:00: {'team_id': 106269804045322803, 'team_name': 'Beyond Gaming', 'team_acronym': 'BYG', 'team_slug': 'mega-bank-beyond-gaming'}
+2023-10-31 04:09 +00:00: {'team_id': 103461966951059521, 'team_name': 'Evil Geniuses LG', 'team_acronym': 'EG', 'team_slug': 'evil-geniuses'}
+2023-10-31 04:09 +00:00: {'team_id': 100285330168091787, 'team_name': 'DetonatioN FocusMe', 'team_acronym': 'DFM', 'team_slug': 'detonation-focusme'}
+2023-10-31 04:09 +00:00: {'team_id': 103461966951059521, 'team_name': 'Evil Geniuses LG', 'team_acronym': 'EG', 'team_slug': 'evil-geniuses'}
+2023-10-31 04:09 +00:00: {'team_id': 99566404585387054, 'team_name': 'DRX', 'team_acronym': 'DRX', 'team_slug': 'drx'}
+2023-10-31 04:09 +00:00: {'team_id': 102235771678061291, 'team_name': 'DenizBank İstanbul Wildcats', 'team_acronym': 'IW', 'team_slug': 'fastpay-wildcats'}
+2023-10-31 04:09 +00:00: {'team_id': 99566404585387054, 'team_name': 'DRX', 'team_acronym': 'DRX', 'team_slug': 'drx'}
+2023-10-31 04:09 +00:00: {'team_id': 99566404585387054, 'team_name': 'DRX', 'team_acronym': 'DRX', 'team_slug': 'drx'}
+2023-10-31 04:09 +00:00: {'team_id': 102235771678061291, 'team_name': 'DenizBank İstanbul Wildcats', 'team_acronym': 'IW', 'team_slug': 'fastpay-wildcats'}
+2023-10-31 04:09 +00:00: {'team_id': 99566404585387054, 'team_name': 'DRX', 'team_acronym': 'DRX', 'team_slug': 'drx'}
+2023-10-31 04:09 +00:00: {'team_id': 99566404585387054, 'team_name': 'DRX', 'team_acronym': 'DRX', 'team_slug': 'drx'}
+2023-10-31 04:09 +00:00: {'team_id': 102235771678061291, 'team_name': 'DenizBank İstanbul Wildcats', 'team_acronym': 'IW', 'team_slug': 'fastpay-wildcats'}
+2023-10-31 04:09 +00:00: {'team_id': 102235771678061291, 'team_name': 'DenizBank İstanbul Wildcats', 'team_acronym': 'IW', 'team_slug': 'fastpay-wildcats'}
+2023-10-31 04:09 +00:00: {'team_id': 102235771678061291, 'team_name': 'DenizBank İstanbul Wildcats', 'team_acronym': 'IW', 'team_slug': 'fastpay-wildcats'}
+2023-10-31 04:09 +00:00: {'team_id': 100725845018863243, 'team_name': 'Dplus Kia', 'team_acronym': 'DK', 'team_slug': 'dwg-kia'}
+2023-10-31 04:09 +00:00: {'team_id': 103461966951059521, 'team_name': 'Evil Geniuses LG', 'team_acronym': 'EG', 'team_slug': 'evil-geniuses'}
+2023-10-31 04:09 +00:00: {'team_id': 100725845018863243, 'team_name': 'Dplus Kia', 'team_acronym': 'DK', 'team_slug': 'dwg-kia'}
+2023-10-31 04:09 +00:00: {'team_id': 103461966951059521, 'team_name': 'Evil Geniuses LG', 'team_acronym': 'EG', 'team_slug': 'evil-geniuses'}
+2023-10-31 04:09 +00:00: {'team_id': 100725845018863243, 'team_name': 'Dplus Kia', 'team_acronym': 'DK', 'team_slug': 'dwg-kia'}
+2023-10-31 04:09 +00:00: {'team_id': 103461966951059521, 'team_name': 'Evil Geniuses LG', 'team_acronym': 'EG', 'team_slug': 'evil-geniuses'}
+2023-10-31 04:09 +00:00: {'team_id': 100725845018863243, 'team_name': 'Dplus Kia', 'team_acronym': 'DK', 'team_slug': 'dwg-kia'}
+2023-10-31 04:09 +00:00: {'team_id': 103461966951059521, 'team_name': 'Evil Geniuses LG', 'team_acronym': 'EG', 'team_slug': 'evil-geniuses'}
+2023-10-31 04:09 +00:00: {'team_id': 100725845018863243, 'team_name': 'Dplus Kia', 'team_acronym': 'DK', 'team_slug': 'dwg-kia'}
+2023-10-31 04:09 +00:00: {'team_id': 103461966951059521, 'team_name': 'Evil Geniuses LG', 'team_acronym': 'EG', 'team_slug': 'evil-geniuses'}
+2023-10-31 04:09 +00:00: {'team_id': 103461966951059521, 'team_name': 'Evil Geniuses LG', 'team_acronym': 'EG', 'team_slug': 'evil-geniuses'}
+2023-10-31 04:09 +00:00: {'team_id': 100725845018863243, 'team_name': 'Dplus Kia', 'team_acronym': 'DK', 'team_slug': 'dwg-kia'}
+2023-10-31 04:09 +00:00: {'team_id': 100725845018863243, 'team_name': 'Dplus Kia', 'team_acronym': 'DK', 'team_slug': 'dwg-kia'}
+2023-10-31 04:09 +00:00: {'team_id': 101383793574360315, 'team_name': 'KOI', 'team_acronym': 'KOI', 'team_slug': 'rogue'}
+2023-10-31 04:09 +00:00: {'team_id': 98767991954244555, 'team_name': 'GAM Esports', 'team_acronym': 'GAM', 'team_slug': 'gam-esports'}
+2023-10-31 04:09 +00:00: {'team_id': 101383793574360315, 'team_name': 'KOI', 'team_acronym': 'KOI', 'team_slug': 'rogue'}
+2023-10-31 04:09 +00:00: {'team_id': 101383793574360315, 'team_name': 'KOI', 'team_acronym': 'KOI', 'team_slug': 'rogue'}
+2023-10-31 04:09 +00:00: {'team_id': 99566404585387054, 'team_name': 'DRX', 'team_acronym': 'DRX', 'team_slug': 'drx'}
+2023-10-31 04:09 +00:00: {'team_id': 98767991954244555, 'team_name': 'GAM Esports', 'team_acronym': 'GAM', 'team_slug': 'gam-esports'}
+2023-10-31 04:09 +00:00: {'team_id': 99566404585387054, 'team_name': 'DRX', 'team_acronym': 'DRX', 'team_slug': 'drx'}
+2023-10-31 04:09 +00:00: {'team_id': 98767991954244555, 'team_name': 'GAM Esports', 'team_acronym': 'GAM', 'team_slug': 'gam-esports'}
+2023-10-31 04:09 +00:00: {'team_id': 99566404585387054, 'team_name': 'DRX', 'team_acronym': 'DRX', 'team_slug': 'drx'}
+2023-10-31 04:09 +00:00: {'team_id': 101383793574360315, 'team_name': 'KOI', 'team_acronym': 'KOI', 'team_slug': 'rogue'}
+2023-10-31 04:09 +00:00: {'team_id': 101383793574360315, 'team_name': 'KOI', 'team_acronym': 'KOI', 'team_slug': 'rogue'}
+2023-10-31 04:09 +00:00: {'team_id': 98767991954244555, 'team_name': 'GAM Esports', 'team_acronym': 'GAM', 'team_slug': 'gam-esports'}
+2023-10-31 04:09 +00:00: {'team_id': 99566404585387054, 'team_name': 'DRX', 'team_acronym': 'DRX', 'team_slug': 'drx'}
+2023-10-31 04:09 +00:00: {'team_id': 101383793574360315, 'team_name': 'KOI', 'team_acronym': 'KOI', 'team_slug': 'rogue'}
+2023-10-31 04:09 +00:00: {'team_id': 98767991954244555, 'team_name': 'GAM Esports', 'team_acronym': 'GAM', 'team_slug': 'gam-esports'}
+2023-10-31 04:09 +00:00: {'team_id': 99566404585387054, 'team_name': 'DRX', 'team_acronym': 'DRX', 'team_slug': 'drx'}
+2023-10-31 04:09 +00:00: {'team_id': 99566404585387054, 'team_name': 'DRX', 'team_acronym': 'DRX', 'team_slug': 'drx'}
+2023-10-31 04:09 +00:00: {'team_id': 98767991954244555, 'team_name': 'GAM Esports', 'team_acronym': 'GAM', 'team_slug': 'gam-esports'}
+2023-10-31 04:09 +00:00: {'team_id': 99566404585387054, 'team_name': 'DRX', 'team_acronym': 'DRX', 'team_slug': 'drx'}
+2023-10-31 04:09 +00:00: {'team_id': 101383793574360315, 'team_name': 'KOI', 'team_acronym': 'KOI', 'team_slug': 'rogue'}
+2023-10-31 04:09 +00:00: {'team_id': 107700199633958891, 'team_name': 'CTBC Flying Oyster', 'team_acronym': 'CFO', 'team_slug': 'ctbc-flying-oyster'}
+2023-10-31 04:09 +00:00: {'team_id': 99294153828264740, 'team_name': '100 Thieves', 'team_acronym': '100', 'team_slug': '100-thieves'}
+2023-10-31 04:09 +00:00: {'team_id': 107700199633958891, 'team_name': 'CTBC Flying Oyster', 'team_acronym': 'CFO', 'team_slug': 'ctbc-flying-oyster'}
+2023-10-31 04:09 +00:00: {'team_id': 99294153828264740, 'team_name': '100 Thieves', 'team_acronym': '100', 'team_slug': '100-thieves'}
+2023-10-31 04:09 +00:00: {'team_id': 107700199633958891, 'team_name': 'CTBC Flying Oyster', 'team_acronym': 'CFO', 'team_slug': 'ctbc-flying-oyster'}
+2023-10-31 04:09 +00:00: [31/Oct/2023 10:09:21] "GET /api/v1/ranking/tournament_rankings/108998961191900167/?stage=Groups HTTP/1.1" 200 939
+2023-10-31 04:11 +00:00: [31/Oct/2023 10:11:13] "GET /api/v1/ranking/tournament_rankings/108998961191900167?stage=Groups HTTP/1.1" 301 0
+2023-10-31 04:11 +00:00: {'team_id': 99294153828264740, 'team_name': '100 Thieves', 'team_acronym': '100', 'team_slug': '100-thieves'}
+2023-10-31 04:11 +00:00: {'team_id': 107700199633958891, 'team_name': 'CTBC Flying Oyster', 'team_acronym': 'CFO', 'team_slug': 'ctbc-flying-oyster'}
+2023-10-31 04:11 +00:00: {'team_id': 99294153828264740, 'team_name': '100 Thieves', 'team_acronym': '100', 'team_slug': '100-thieves'}
+2023-10-31 04:11 +00:00: {'team_id': 99294153828264740, 'team_name': '100 Thieves', 'team_acronym': '100', 'team_slug': '100-thieves'}
+2023-10-31 04:11 +00:00: {'team_id': 107700199633958891, 'team_name': 'CTBC Flying Oyster', 'team_acronym': 'CFO', 'team_slug': 'ctbc-flying-oyster'}
+2023-10-31 04:11 +00:00: {'team_id': 107700199633958891, 'team_name': 'CTBC Flying Oyster', 'team_acronym': 'CFO', 'team_slug': 'ctbc-flying-oyster'}
+2023-10-31 04:11 +00:00: {'team_id': 99294153828264740, 'team_name': '100 Thieves', 'team_acronym': '100', 'team_slug': '100-thieves'}
+2023-10-31 04:11 +00:00: Ranking:  [{'team_id': 103461966951059521, 'team_code': 'EG', 'team_name': 'Evil Geniuses LG', 'rank': 1}, {'team_id': 102235771678061291, 'team_code': 'IW', 'team_name': 'DenizBank İstanbul Wildcats', 'rank': 2}, {'team_id': 100725845018863243, 'team_code': 'DK', 'team_name': 'Dplus Kia', 'rank': 3}, {'team_id': 100285330168091787, 'team_code': 'DFM', 'team_name': 'DetonatioN FocusMe', 'rank': 4}, {'team_id': 99294153828264740, 'team_code': '100', 'team_name': '100 Thieves', 'rank': 5}, {'team_id': 101383793574360315, 'team_code': 'KOI', 'team_name': 'KOI', 'rank': 6}, {'team_id': 99566406332987990, 'team_code': 'CHF', 'team_name': 'The Chiefs', 'rank': 7}, {'team_id': 99566404585387054, 'team_code': 'DRX', 'team_name': 'DRX', 'rank': 8}, {'team_id': 106269804045322803, 'team_code': 'BYG', 'team_name': 'Beyond Gaming', 'rank': 9}, {'team_id': 107700199633958891, 'team_code': 'CFO', 'team_name': 'CTBC Flying Oyster', 'rank': 10}, {'team_id': 98767991954244555, 'team_code': 'GAM', 'team_name': 'GAM Esports', 'rank': 11}]
+2023-10-31 04:11 +00:00: Groups
+2023-10-31 04:11 +00:00: {'team_id': 100285330168091787, 'team_name': 'DetonatioN FocusMe', 'team_acronym': 'DFM', 'team_slug': 'detonation-focusme'}
+2023-10-31 04:11 +00:00: {'team_id': 103461966951059521, 'team_name': 'Evil Geniuses LG', 'team_acronym': 'EG', 'team_slug': 'evil-geniuses'}
+2023-10-31 04:11 +00:00: {'team_id': 99566406332987990, 'team_name': 'The Chiefs', 'team_acronym': 'CHF', 'team_slug': 'the-chiefs'}
+2023-10-31 04:11 +00:00: {'team_id': 106269804045322803, 'team_name': 'Beyond Gaming', 'team_acronym': 'BYG', 'team_slug': 'mega-bank-beyond-gaming'}
+2023-10-31 04:11 +00:00: {'team_id': 100285330168091787, 'team_name': 'DetonatioN FocusMe', 'team_acronym': 'DFM', 'team_slug': 'detonation-focusme'}
+2023-10-31 04:11 +00:00: {'team_id': 103461966951059521, 'team_name': 'Evil Geniuses LG', 'team_acronym': 'EG', 'team_slug': 'evil-geniuses'}
+2023-10-31 04:11 +00:00: {'team_id': 100285330168091787, 'team_name': 'DetonatioN FocusMe', 'team_acronym': 'DFM', 'team_slug': 'detonation-focusme'}
+2023-10-31 04:11 +00:00: {'team_id': 99566406332987990, 'team_name': 'The Chiefs', 'team_acronym': 'CHF', 'team_slug': 'the-chiefs'}
+2023-10-31 04:11 +00:00: {'team_id': 106269804045322803, 'team_name': 'Beyond Gaming', 'team_acronym': 'BYG', 'team_slug': 'mega-bank-beyond-gaming'}
+2023-10-31 04:11 +00:00: {'team_id': 100285330168091787, 'team_name': 'DetonatioN FocusMe', 'team_acronym': 'DFM', 'team_slug': 'detonation-focusme'}
+2023-10-31 04:11 +00:00: {'team_id': 100285330168091787, 'team_name': 'DetonatioN FocusMe', 'team_acronym': 'DFM', 'team_slug': 'detonation-focusme'}
+2023-10-31 04:11 +00:00: {'team_id': 103461966951059521, 'team_name': 'Evil Geniuses LG', 'team_acronym': 'EG', 'team_slug': 'evil-geniuses'}
+2023-10-31 04:11 +00:00: {'team_id': 99566406332987990, 'team_name': 'The Chiefs', 'team_acronym': 'CHF', 'team_slug': 'the-chiefs'}
+2023-10-31 04:11 +00:00: {'team_id': 103461966951059521, 'team_name': 'Evil Geniuses LG', 'team_acronym': 'EG', 'team_slug': 'evil-geniuses'}
+2023-10-31 04:11 +00:00: {'team_id': 106269804045322803, 'team_name': 'Beyond Gaming', 'team_acronym': 'BYG', 'team_slug': 'mega-bank-beyond-gaming'}
+2023-10-31 04:11 +00:00: {'team_id': 103461966951059521, 'team_name': 'Evil Geniuses LG', 'team_acronym': 'EG', 'team_slug': 'evil-geniuses'}
+2023-10-31 04:11 +00:00: {'team_id': 99566406332987990, 'team_name': 'The Chiefs', 'team_acronym': 'CHF', 'team_slug': 'the-chiefs'}
+2023-10-31 04:11 +00:00: {'team_id': 106269804045322803, 'team_name': 'Beyond Gaming', 'team_acronym': 'BYG', 'team_slug': 'mega-bank-beyond-gaming'}
+2023-10-31 04:11 +00:00: {'team_id': 99566406332987990, 'team_name': 'The Chiefs', 'team_acronym': 'CHF', 'team_slug': 'the-chiefs'}
+2023-10-31 04:11 +00:00: {'team_id': 106269804045322803, 'team_name': 'Beyond Gaming', 'team_acronym': 'BYG', 'team_slug': 'mega-bank-beyond-gaming'}
+2023-10-31 04:11 +00:00: {'team_id': 103461966951059521, 'team_name': 'Evil Geniuses LG', 'team_acronym': 'EG', 'team_slug': 'evil-geniuses'}
+2023-10-31 04:11 +00:00: {'team_id': 100285330168091787, 'team_name': 'DetonatioN FocusMe', 'team_acronym': 'DFM', 'team_slug': 'detonation-focusme'}
+2023-10-31 04:11 +00:00: {'team_id': 103461966951059521, 'team_name': 'Evil Geniuses LG', 'team_acronym': 'EG', 'team_slug': 'evil-geniuses'}
+2023-10-31 04:11 +00:00: {'team_id': 99566404585387054, 'team_name': 'DRX', 'team_acronym': 'DRX', 'team_slug': 'drx'}
+2023-10-31 04:11 +00:00: {'team_id': 102235771678061291, 'team_name': 'DenizBank İstanbul Wildcats', 'team_acronym': 'IW', 'team_slug': 'fastpay-wildcats'}
+2023-10-31 04:11 +00:00: {'team_id': 99566404585387054, 'team_name': 'DRX', 'team_acronym': 'DRX', 'team_slug': 'drx'}
+2023-10-31 04:11 +00:00: {'team_id': 99566404585387054, 'team_name': 'DRX', 'team_acronym': 'DRX', 'team_slug': 'drx'}
+2023-10-31 04:11 +00:00: {'team_id': 102235771678061291, 'team_name': 'DenizBank İstanbul Wildcats', 'team_acronym': 'IW', 'team_slug': 'fastpay-wildcats'}
+2023-10-31 04:11 +00:00: {'team_id': 99566404585387054, 'team_name': 'DRX', 'team_acronym': 'DRX', 'team_slug': 'drx'}
+2023-10-31 04:11 +00:00: {'team_id': 99566404585387054, 'team_name': 'DRX', 'team_acronym': 'DRX', 'team_slug': 'drx'}
+2023-10-31 04:11 +00:00: {'team_id': 102235771678061291, 'team_name': 'DenizBank İstanbul Wildcats', 'team_acronym': 'IW', 'team_slug': 'fastpay-wildcats'}
+2023-10-31 04:11 +00:00: {'team_id': 102235771678061291, 'team_name': 'DenizBank İstanbul Wildcats', 'team_acronym': 'IW', 'team_slug': 'fastpay-wildcats'}
+2023-10-31 04:11 +00:00: {'team_id': 102235771678061291, 'team_name': 'DenizBank İstanbul Wildcats', 'team_acronym': 'IW', 'team_slug': 'fastpay-wildcats'}
+2023-10-31 04:11 +00:00: {'team_id': 100725845018863243, 'team_name': 'Dplus Kia', 'team_acronym': 'DK', 'team_slug': 'dwg-kia'}
+2023-10-31 04:11 +00:00: {'team_id': 103461966951059521, 'team_name': 'Evil Geniuses LG', 'team_acronym': 'EG', 'team_slug': 'evil-geniuses'}
+2023-10-31 04:11 +00:00: {'team_id': 100725845018863243, 'team_name': 'Dplus Kia', 'team_acronym': 'DK', 'team_slug': 'dwg-kia'}
+2023-10-31 04:11 +00:00: {'team_id': 103461966951059521, 'team_name': 'Evil Geniuses LG', 'team_acronym': 'EG', 'team_slug': 'evil-geniuses'}
+2023-10-31 04:11 +00:00: {'team_id': 100725845018863243, 'team_name': 'Dplus Kia', 'team_acronym': 'DK', 'team_slug': 'dwg-kia'}
+2023-10-31 04:11 +00:00: {'team_id': 103461966951059521, 'team_name': 'Evil Geniuses LG', 'team_acronym': 'EG', 'team_slug': 'evil-geniuses'}
+2023-10-31 04:11 +00:00: {'team_id': 100725845018863243, 'team_name': 'Dplus Kia', 'team_acronym': 'DK', 'team_slug': 'dwg-kia'}
+2023-10-31 04:11 +00:00: {'team_id': 103461966951059521, 'team_name': 'Evil Geniuses LG', 'team_acronym': 'EG', 'team_slug': 'evil-geniuses'}
+2023-10-31 04:11 +00:00: {'team_id': 100725845018863243, 'team_name': 'Dplus Kia', 'team_acronym': 'DK', 'team_slug': 'dwg-kia'}
+2023-10-31 04:11 +00:00: {'team_id': 103461966951059521, 'team_name': 'Evil Geniuses LG', 'team_acronym': 'EG', 'team_slug': 'evil-geniuses'}
+2023-10-31 04:11 +00:00: {'team_id': 103461966951059521, 'team_name': 'Evil Geniuses LG', 'team_acronym': 'EG', 'team_slug': 'evil-geniuses'}
+2023-10-31 04:11 +00:00: {'team_id': 100725845018863243, 'team_name': 'Dplus Kia', 'team_acronym': 'DK', 'team_slug': 'dwg-kia'}
+2023-10-31 04:11 +00:00: {'team_id': 100725845018863243, 'team_name': 'Dplus Kia', 'team_acronym': 'DK', 'team_slug': 'dwg-kia'}
+2023-10-31 04:11 +00:00: {'team_id': 101383793574360315, 'team_name': 'KOI', 'team_acronym': 'KOI', 'team_slug': 'rogue'}
+2023-10-31 04:11 +00:00: {'team_id': 98767991954244555, 'team_name': 'GAM Esports', 'team_acronym': 'GAM', 'team_slug': 'gam-esports'}
+2023-10-31 04:11 +00:00: {'team_id': 101383793574360315, 'team_name': 'KOI', 'team_acronym': 'KOI', 'team_slug': 'rogue'}
+2023-10-31 04:11 +00:00: {'team_id': 101383793574360315, 'team_name': 'KOI', 'team_acronym': 'KOI', 'team_slug': 'rogue'}
+2023-10-31 04:11 +00:00: {'team_id': 99566404585387054, 'team_name': 'DRX', 'team_acronym': 'DRX', 'team_slug': 'drx'}
+2023-10-31 04:11 +00:00: {'team_id': 98767991954244555, 'team_name': 'GAM Esports', 'team_acronym': 'GAM', 'team_slug': 'gam-esports'}
+2023-10-31 04:11 +00:00: {'team_id': 99566404585387054, 'team_name': 'DRX', 'team_acronym': 'DRX', 'team_slug': 'drx'}
+2023-10-31 04:11 +00:00: {'team_id': 98767991954244555, 'team_name': 'GAM Esports', 'team_acronym': 'GAM', 'team_slug': 'gam-esports'}
+2023-10-31 04:11 +00:00: {'team_id': 99566404585387054, 'team_name': 'DRX', 'team_acronym': 'DRX', 'team_slug': 'drx'}
+2023-10-31 04:11 +00:00: {'team_id': 101383793574360315, 'team_name': 'KOI', 'team_acronym': 'KOI', 'team_slug': 'rogue'}
+2023-10-31 04:11 +00:00: [31/Oct/2023 10:11:14] "GET /api/v1/ranking/tournament_rankings/108998961191900167/?stage=Groups HTTP/1.1" 200 939
+2023-10-31 04:11 +00:00: [31/Oct/2023 10:11:20] "GET /api/v1/ranking/tournament_rankings/108998961191900167?stage=Groups HTTP/1.1" 301 0
+2023-10-31 04:11 +00:00: {'team_id': 101383793574360315, 'team_name': 'KOI', 'team_acronym': 'KOI', 'team_slug': 'rogue'}
+2023-10-31 04:11 +00:00: {'team_id': 98767991954244555, 'team_name': 'GAM Esports', 'team_acronym': 'GAM', 'team_slug': 'gam-esports'}
+2023-10-31 04:11 +00:00: {'team_id': 99566404585387054, 'team_name': 'DRX', 'team_acronym': 'DRX', 'team_slug': 'drx'}
+2023-10-31 04:11 +00:00: {'team_id': 101383793574360315, 'team_name': 'KOI', 'team_acronym': 'KOI', 'team_slug': 'rogue'}
+2023-10-31 04:11 +00:00: {'team_id': 98767991954244555, 'team_name': 'GAM Esports', 'team_acronym': 'GAM', 'team_slug': 'gam-esports'}
+2023-10-31 04:11 +00:00: {'team_id': 99566404585387054, 'team_name': 'DRX', 'team_acronym': 'DRX', 'team_slug': 'drx'}
+2023-10-31 04:11 +00:00: {'team_id': 99566404585387054, 'team_name': 'DRX', 'team_acronym': 'DRX', 'team_slug': 'drx'}
+2023-10-31 04:11 +00:00: {'team_id': 98767991954244555, 'team_name': 'GAM Esports', 'team_acronym': 'GAM', 'team_slug': 'gam-esports'}
+2023-10-31 04:11 +00:00: {'team_id': 99566404585387054, 'team_name': 'DRX', 'team_acronym': 'DRX', 'team_slug': 'drx'}
+2023-10-31 04:11 +00:00: {'team_id': 101383793574360315, 'team_name': 'KOI', 'team_acronym': 'KOI', 'team_slug': 'rogue'}
+2023-10-31 04:11 +00:00: {'team_id': 107700199633958891, 'team_name': 'CTBC Flying Oyster', 'team_acronym': 'CFO', 'team_slug': 'ctbc-flying-oyster'}
+2023-10-31 04:11 +00:00: {'team_id': 99294153828264740, 'team_name': '100 Thieves', 'team_acronym': '100', 'team_slug': '100-thieves'}
+2023-10-31 04:11 +00:00: {'team_id': 107700199633958891, 'team_name': 'CTBC Flying Oyster', 'team_acronym': 'CFO', 'team_slug': 'ctbc-flying-oyster'}
+2023-10-31 04:11 +00:00: {'team_id': 99294153828264740, 'team_name': '100 Thieves', 'team_acronym': '100', 'team_slug': '100-thieves'}
+2023-10-31 04:11 +00:00: {'team_id': 107700199633958891, 'team_name': 'CTBC Flying Oyster', 'team_acronym': 'CFO', 'team_slug': 'ctbc-flying-oyster'}
+2023-10-31 04:11 +00:00: {'team_id': 99294153828264740, 'team_name': '100 Thieves', 'team_acronym': '100', 'team_slug': '100-thieves'}
+2023-10-31 04:11 +00:00: {'team_id': 107700199633958891, 'team_name': 'CTBC Flying Oyster', 'team_acronym': 'CFO', 'team_slug': 'ctbc-flying-oyster'}
+2023-10-31 04:11 +00:00: {'team_id': 99294153828264740, 'team_name': '100 Thieves', 'team_acronym': '100', 'team_slug': '100-thieves'}
+2023-10-31 04:11 +00:00: {'team_id': 99294153828264740, 'team_name': '100 Thieves', 'team_acronym': '100', 'team_slug': '100-thieves'}
+2023-10-31 04:11 +00:00: {'team_id': 107700199633958891, 'team_name': 'CTBC Flying Oyster', 'team_acronym': 'CFO', 'team_slug': 'ctbc-flying-oyster'}
+2023-10-31 04:11 +00:00: {'team_id': 107700199633958891, 'team_name': 'CTBC Flying Oyster', 'team_acronym': 'CFO', 'team_slug': 'ctbc-flying-oyster'}
+2023-10-31 04:11 +00:00: {'team_id': 99294153828264740, 'team_name': '100 Thieves', 'team_acronym': '100', 'team_slug': '100-thieves'}
+2023-10-31 04:11 +00:00: Ranking:  [{'team_id': 103461966951059521, 'team_code': 'EG', 'team_name': 'Evil Geniuses LG', 'rank': 1}, {'team_id': 102235771678061291, 'team_code': 'IW', 'team_name': 'DenizBank İstanbul Wildcats', 'rank': 2}, {'team_id': 100725845018863243, 'team_code': 'DK', 'team_name': 'Dplus Kia', 'rank': 3}, {'team_id': 100285330168091787, 'team_code': 'DFM', 'team_name': 'DetonatioN FocusMe', 'rank': 4}, {'team_id': 99294153828264740, 'team_code': '100', 'team_name': '100 Thieves', 'rank': 5}, {'team_id': 101383793574360315, 'team_code': 'KOI', 'team_name': 'KOI', 'rank': 6}, {'team_id': 99566406332987990, 'team_code': 'CHF', 'team_name': 'The Chiefs', 'rank': 7}, {'team_id': 99566404585387054, 'team_code': 'DRX', 'team_name': 'DRX', 'rank': 8}, {'team_id': 106269804045322803, 'team_code': 'BYG', 'team_name': 'Beyond Gaming', 'rank': 9}, {'team_id': 107700199633958891, 'team_code': 'CFO', 'team_name': 'CTBC Flying Oyster', 'rank': 10}, {'team_id': 98767991954244555, 'team_code': 'GAM', 'team_name': 'GAM Esports', 'rank': 11}]
+2023-10-31 04:11 +00:00: Groups
+2023-10-31 04:11 +00:00: {'team_id': 100285330168091787, 'team_name': 'DetonatioN FocusMe', 'team_acronym': 'DFM', 'team_slug': 'detonation-focusme'}
+2023-10-31 04:11 +00:00: {'team_id': 103461966951059521, 'team_name': 'Evil Geniuses LG', 'team_acronym': 'EG', 'team_slug': 'evil-geniuses'}
+2023-10-31 04:11 +00:00: {'team_id': 99566406332987990, 'team_name': 'The Chiefs', 'team_acronym': 'CHF', 'team_slug': 'the-chiefs'}
+2023-10-31 04:11 +00:00: {'team_id': 106269804045322803, 'team_name': 'Beyond Gaming', 'team_acronym': 'BYG', 'team_slug': 'mega-bank-beyond-gaming'}
+2023-10-31 04:11 +00:00: {'team_id': 100285330168091787, 'team_name': 'DetonatioN FocusMe', 'team_acronym': 'DFM', 'team_slug': 'detonation-focusme'}
+2023-10-31 04:11 +00:00: {'team_id': 103461966951059521, 'team_name': 'Evil Geniuses LG', 'team_acronym': 'EG', 'team_slug': 'evil-geniuses'}
+2023-10-31 04:11 +00:00: {'team_id': 100285330168091787, 'team_name': 'DetonatioN FocusMe', 'team_acronym': 'DFM', 'team_slug': 'detonation-focusme'}
+2023-10-31 04:11 +00:00: {'team_id': 99566406332987990, 'team_name': 'The Chiefs', 'team_acronym': 'CHF', 'team_slug': 'the-chiefs'}
+2023-10-31 04:11 +00:00: {'team_id': 106269804045322803, 'team_name': 'Beyond Gaming', 'team_acronym': 'BYG', 'team_slug': 'mega-bank-beyond-gaming'}
+2023-10-31 04:11 +00:00: {'team_id': 100285330168091787, 'team_name': 'DetonatioN FocusMe', 'team_acronym': 'DFM', 'team_slug': 'detonation-focusme'}
+2023-10-31 04:11 +00:00: {'team_id': 100285330168091787, 'team_name': 'DetonatioN FocusMe', 'team_acronym': 'DFM', 'team_slug': 'detonation-focusme'}
+2023-10-31 04:11 +00:00: {'team_id': 103461966951059521, 'team_name': 'Evil Geniuses LG', 'team_acronym': 'EG', 'team_slug': 'evil-geniuses'}
+2023-10-31 04:11 +00:00: {'team_id': 99566406332987990, 'team_name': 'The Chiefs', 'team_acronym': 'CHF', 'team_slug': 'the-chiefs'}
+2023-10-31 04:11 +00:00: {'team_id': 103461966951059521, 'team_name': 'Evil Geniuses LG', 'team_acronym': 'EG', 'team_slug': 'evil-geniuses'}
+2023-10-31 04:11 +00:00: {'team_id': 106269804045322803, 'team_name': 'Beyond Gaming', 'team_acronym': 'BYG', 'team_slug': 'mega-bank-beyond-gaming'}
+2023-10-31 04:11 +00:00: {'team_id': 103461966951059521, 'team_name': 'Evil Geniuses LG', 'team_acronym': 'EG', 'team_slug': 'evil-geniuses'}
+2023-10-31 04:11 +00:00: {'team_id': 99566406332987990, 'team_name': 'The Chiefs', 'team_acronym': 'CHF', 'team_slug': 'the-chiefs'}
+2023-10-31 04:11 +00:00: {'team_id': 106269804045322803, 'team_name': 'Beyond Gaming', 'team_acronym': 'BYG', 'team_slug': 'mega-bank-beyond-gaming'}
+2023-10-31 04:11 +00:00: {'team_id': 99566406332987990, 'team_name': 'The Chiefs', 'team_acronym': 'CHF', 'team_slug': 'the-chiefs'}
+2023-10-31 04:11 +00:00: {'team_id': 106269804045322803, 'team_name': 'Beyond Gaming', 'team_acronym': 'BYG', 'team_slug': 'mega-bank-beyond-gaming'}
+2023-10-31 04:11 +00:00: {'team_id': 103461966951059521, 'team_name': 'Evil Geniuses LG', 'team_acronym': 'EG', 'team_slug': 'evil-geniuses'}
+2023-10-31 04:11 +00:00: {'team_id': 100285330168091787, 'team_name': 'DetonatioN FocusMe', 'team_acronym': 'DFM', 'team_slug': 'detonation-focusme'}
+2023-10-31 04:11 +00:00: {'team_id': 103461966951059521, 'team_name': 'Evil Geniuses LG', 'team_acronym': 'EG', 'team_slug': 'evil-geniuses'}
+2023-10-31 04:11 +00:00: {'team_id': 99566404585387054, 'team_name': 'DRX', 'team_acronym': 'DRX', 'team_slug': 'drx'}
+2023-10-31 04:11 +00:00: {'team_id': 102235771678061291, 'team_name': 'DenizBank İstanbul Wildcats', 'team_acronym': 'IW', 'team_slug': 'fastpay-wildcats'}
+2023-10-31 04:11 +00:00: {'team_id': 99566404585387054, 'team_name': 'DRX', 'team_acronym': 'DRX', 'team_slug': 'drx'}
+2023-10-31 04:11 +00:00: {'team_id': 99566404585387054, 'team_name': 'DRX', 'team_acronym': 'DRX', 'team_slug': 'drx'}
+2023-10-31 04:11 +00:00: {'team_id': 102235771678061291, 'team_name': 'DenizBank İstanbul Wildcats', 'team_acronym': 'IW', 'team_slug': 'fastpay-wildcats'}
+2023-10-31 04:11 +00:00: {'team_id': 99566404585387054, 'team_name': 'DRX', 'team_acronym': 'DRX', 'team_slug': 'drx'}
+2023-10-31 04:11 +00:00: {'team_id': 99566404585387054, 'team_name': 'DRX', 'team_acronym': 'DRX', 'team_slug': 'drx'}
+2023-10-31 04:11 +00:00: {'team_id': 102235771678061291, 'team_name': 'DenizBank İstanbul Wildcats', 'team_acronym': 'IW', 'team_slug': 'fastpay-wildcats'}
+2023-10-31 04:11 +00:00: {'team_id': 102235771678061291, 'team_name': 'DenizBank İstanbul Wildcats', 'team_acronym': 'IW', 'team_slug': 'fastpay-wildcats'}
+2023-10-31 04:11 +00:00: {'team_id': 102235771678061291, 'team_name': 'DenizBank İstanbul Wildcats', 'team_acronym': 'IW', 'team_slug': 'fastpay-wildcats'}
+2023-10-31 04:11 +00:00: {'team_id': 100725845018863243, 'team_name': 'Dplus Kia', 'team_acronym': 'DK', 'team_slug': 'dwg-kia'}
+2023-10-31 04:11 +00:00: {'team_id': 103461966951059521, 'team_name': 'Evil Geniuses LG', 'team_acronym': 'EG', 'team_slug': 'evil-geniuses'}
+2023-10-31 04:11 +00:00: {'team_id': 100725845018863243, 'team_name': 'Dplus Kia', 'team_acronym': 'DK', 'team_slug': 'dwg-kia'}
+2023-10-31 04:11 +00:00: {'team_id': 103461966951059521, 'team_name': 'Evil Geniuses LG', 'team_acronym': 'EG', 'team_slug': 'evil-geniuses'}
+2023-10-31 04:11 +00:00: {'team_id': 100725845018863243, 'team_name': 'Dplus Kia', 'team_acronym': 'DK', 'team_slug': 'dwg-kia'}
+2023-10-31 04:11 +00:00: {'team_id': 103461966951059521, 'team_name': 'Evil Geniuses LG', 'team_acronym': 'EG', 'team_slug': 'evil-geniuses'}
+2023-10-31 04:11 +00:00: {'team_id': 100725845018863243, 'team_name': 'Dplus Kia', 'team_acronym': 'DK', 'team_slug': 'dwg-kia'}
+2023-10-31 04:11 +00:00: [31/Oct/2023 10:11:22] "GET /api/v1/ranking/tournament_rankings/108998961191900167/?stage=Groups HTTP/1.1" 200 939
+2023-10-31 04:11 +00:00: [31/Oct/2023 10:11:37] "GET /api/v1/ranking/global_rankings?number_of_teams=20 HTTP/1.1" 301 0
+2023-10-31 04:11 +00:00: [31/Oct/2023 10:11:42] "GET /api/v1/ranking/global_rankings/?number_of_teams=20 HTTP/1.1" 200 1736
+2023-10-31 04:11 +00:00: [31/Oct/2023 10:11:50] "GET /api/v1/ranking/team_rankings?team_ids=[98767991853197861,98767991926151025,98767991853197861] HTTP/1.1" 301 0
+2023-10-31 04:11 +00:00: [31/Oct/2023 10:11:50] "GET /api/v1/ranking/team_rankings/?team_ids=[98767991853197861,98767991926151025,98767991853197861] HTTP/1.1" 200 155

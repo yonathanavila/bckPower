@@ -4,14 +4,13 @@ verify_ssl = true
 name = "pypi"
 
 [scripts]
-dev	=	"python manage.py runserver 8001"
+dev	=	"python manage.py runserver 0.0.0.0:3301"
 mig =	"python manage.py migrate"
 app	=	"python manage.py startapp"
 make = "python manage.py makemigrations"
 createsu = "python manage.py createsuperuser"
 
 [packages]
-psycopg = "*"
 pillow = "*"
 django = "*"
 djangorestframework = "*"
@@ -19,6 +18,8 @@ django-cors-headers = "*"
 django-filter = "*"
 requests = "*"
 python-dateutil = "*"
+psycopg = "*"
+gunicorn = "*"
 
 [dev-packages]
 
